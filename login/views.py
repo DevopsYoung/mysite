@@ -11,6 +11,8 @@ def hash_code(s, salt='mysite'):# 加点盐
     h.update(s.encode())  # update方法只接收bytes类型
     return h.hexdigest()
 
+
+
 def index(request):
     if not request.session.get('is_login', None):
         return redirect('/login/')
